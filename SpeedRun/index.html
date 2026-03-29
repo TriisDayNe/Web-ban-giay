@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpeedRun</title>
     <link rel="icon" type="image/png" href="images/SpeedRun.png">
-    <link rel="stylesheet" href="sneaker-store.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -36,10 +36,12 @@
 
                     <div class="icon-group">
                         <div class="cart-icon">
-                            🛒
-                            <span class="badge">0</span>
+                            <img src="images/layout/Cart.png" alt="Giỏ hàng" class="nav-icon-image">
+                            <span class="badge">10</span>
                         </div>
-                        <div class="user-icon">👤</div>
+                        <div class="user-icon">
+                            <img src="images/layout/User.png" alt="Tài khoản" class="nav-icon-image">
+                        </div>
                     </div>
                 </div>
                 
@@ -342,9 +344,11 @@
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="avatar">👨</div>
+                        <div class="avatar">
+                            <img src="images/LeMinhTri.jpg" alt="Ảnh khách hàng Lê Minh Trí" class="avatar-image">
+                        </div>
                         <div class="user-info">
-                            <h4>Minh Tuấn</h4>
+                            <h4>Lê Minh Trí</h4>
                             <div class="stars">★★★★★</div>
                         </div>
                     </div>
@@ -354,9 +358,11 @@
 
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="avatar">👩</div>
+                        <div class="avatar">
+                            <img src="images/DoDucTri.jpg" alt="Ảnh khách hàng Đỗ Đức Trí" class="avatar-image">
+                        </div>
                         <div class="user-info">
-                            <h4>Thu Hà</h4>
+                            <h4>Đỗ Đức Trí</h4>
                             <div class="stars">★★★★★</div>
                         </div>
                     </div>
@@ -366,9 +372,11 @@
 
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="avatar">👨</div>
+                        <div class="avatar">
+                            <img src="images/TranQuangTrung.jpg" alt="Ảnh khách hàng Trần Quang Trung" class="avatar-image">
+                        </div>
                         <div class="user-info">
-                            <h4>Đức Anh</h4>
+                            <h4>Trần Quang Trung</h4>
                             <div class="stars">★★★★★</div>
                         </div>
                     </div>
@@ -387,10 +395,18 @@
                     <p>SpeedRun là đơn vị cung cấp giày thể thao chính hãng hàng đầu tại Việt Nam. Chúng tôi cam kết
                         mang đến sản phẩm chất lượng với giá tốt nhất.</p>
                     <div class="social-icons">
-                        <a href="#" class="social-icon">📘</a>
-                        <a href="#" class="social-icon">📷</a>
-                        <a href="#" class="social-icon">🐦</a>
-                        <a href="#" class="social-icon">▶️</a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <img src="images/layout/facebook.png" alt="Facebook" class="social-icon-image">
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <img src="images/layout/instagram.png" alt="Instagram" class="social-icon-image">
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <img src="images/layout/twitter.png" alt="Twitter" class="social-icon-image">
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <img src="images/layout/youtube.png" alt="YouTube" class="social-icon-image">
+                        </a>
                     </div>
                 </div>
 
@@ -418,22 +434,34 @@
                     <h3>Thông tin liên hệ</h3>
                     <ul class="contact-info">
                         <li>
-                            <strong>Văn phòng</strong><br>
-                            180 Cao Lỗ, Chánh Hưng<br>
-                            TP. Hồ Chí Minh
+                            <div class="contact-item-title">
+                                <img src="images/layout/location.png" alt="Biểu tượng vị trí" class="contact-icon-image">
+                                <strong>Văn phòng</strong>
+                            </div>
+                            <span class="contact-detail">180 Cao Lỗ, Chánh Hưng</span>
+                            <span class="contact-detail">TP. Hồ Chí Minh</span>
                         </li>
                         <li>
-                            <strong>Địa chỉ kho</strong><br>
-                            63 Đoàn Hồng Phước, Tân Phú<br>
-                            TP. Hồ Chí Minh
+                            <div class="contact-item-title">
+                                <img src="images/layout/home.png" alt="Biểu tượng kho" class="contact-icon-image">
+                                <strong>Địa chỉ kho</strong>
+                            </div>
+                            <span class="contact-detail">63 Đoàn Hồng Phước, Tân Phú</span>
+                            <span class="contact-detail">TP. Hồ Chí Minh</span>
                         </li>
                         <li>
-                            <strong>Hotline</strong><br>
-                            0973 823 184
+                            <div class="contact-item-title">
+                                <img src="images/layout/telephone.png" alt="Biểu tượng hotline" class="contact-icon-image">
+                                <strong>Hotline</strong>
+                            </div>
+                            <span class="contact-detail">0973 823 184</span>
                         </li>
                         <li>
-                            <strong>Email</strong><br>
-                            info@speedrun.vn
+                            <div class="contact-item-title">
+                                <img src="images/layout/mail.png" alt="Biểu tượng email" class="contact-icon-image">
+                                <strong>Email</strong>
+                            </div>
+                            <span class="contact-detail">info@speedrun.vn</span>
                         </li>
                     </ul>
                 </div>
