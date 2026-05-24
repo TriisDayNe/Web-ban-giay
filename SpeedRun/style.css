@@ -931,6 +931,91 @@
         }
     }
 
+    /* Base Menu Toggle (Hidden by default) */
+    .menu-toggle {
+        display: none;
+        color: #fff;
+        font-size: 28px;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    @media (max-width: 600px) {
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .menu-toggle {
+            display: block;
+            order: 1;
+        }
+
+        .logo {
+            order: 2;
+            flex: 1;
+            text-align: center;
+        }
+
+        .logo h1 {
+            font-size: 20px;
+        }
+
+        .nav-actions {
+            order: 3;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-box {
+            display: block;
+            background: #1a1a1a;
+            border-radius: 999px;
+            padding: 4px 10px;
+        }
+
+        .search-box input {
+            width: 80px; /* Nhỏ lại để chừa chỗ cho các icon khác */
+            font-size: 13px;
+        }
+
+        .icon-group {
+            gap: 8px;
+        }
+
+        .nav-center {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #000;
+            padding: 20px;
+            z-index: 1001;
+            border-bottom: 2px solid var(--neon-green);
+        }
+
+        .nav-center.active {
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex !important;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+        }
+
+        .nav-link {
+            font-size: 18px;
+            padding: 10px 0;
+            border-bottom: 1px solid #222;
+        }
+    }
+
     @media (max-width: 640px) {
         .container {
             width: 95%;

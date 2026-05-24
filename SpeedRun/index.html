@@ -13,11 +13,15 @@
     <header class="header">
         <div class="container">
             <div class="nav-wrapper">
+                <div class="menu-toggle" id="mobile-menu-btn">
+                    <span>☰</span>
+                </div>
+                
                 <div class="logo">
                     <h1>SPEED<span>RUN</span></h1>
                 </div>
 
-                <div class="nav-center">
+                <div class="nav-center" id="nav-center">
                     <nav class="nav-menu">
                         <a href="#" class="nav-link active">Trang chủ</a>
                         <a href="#" class="nav-link">Cửa hàng</a>
@@ -480,6 +484,19 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navCenter = document.getElementById('nav-center');
+
+            if (mobileMenuBtn && navCenter) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navCenter.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = navCenter.classList.contains('active') ? '✕' : '☰';
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
