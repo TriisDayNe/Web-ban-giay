@@ -4,6 +4,10 @@
         box-sizing: border-box;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     :root {
         --black: #000000;
         --white: #FFFFFF;
@@ -890,6 +894,46 @@
         color: rgba(255, 255, 255, 0.6);
     }
 
+    /* Back to Top Button */
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: #1a1a1a; /* Nền đen như hình chat icon mới */
+        color: var(--neon-green);
+        border: 2px solid var(--neon-green); /* Viền xanh neon */
+        cursor: pointer;
+        z-index: 1001;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 255, 65, 0.4);
+        transition: all 0.3s ease;
+    }
+
+    .back-to-top span {
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-top: 3px solid var(--neon-green); /* Mũi tên xanh neon */
+        border-left: 3px solid var(--neon-green);
+        transform: rotate(45deg) translateY(2px) translateX(2px);
+    }
+
+    .back-to-top:hover {
+        background-color: var(--neon-green);
+        color: #000;
+        transform: translateY(-5px);
+    }
+
+    .back-to-top:hover span {
+        border-top-color: #000;
+        border-left-color: #000;
+    }
+
     /* Chat Widget Styles */
     .chat-toggle {
         position: fixed;
@@ -916,7 +960,8 @@
     .chat-toggle img {
         width: 30px;
         height: 30px;
-        filter: brightness(0) invert(1);
+        /* Đổ màu neon-green (#00FF41) bằng CSS filter */
+        filter: invert(62%) sepia(91%) saturate(3015%) hue-rotate(95deg) brightness(110%) contrast(124%);
     }
 
     .chat-widget {

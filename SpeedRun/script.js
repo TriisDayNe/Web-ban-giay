@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Luôn quay lại đầu trang khi tải lại (F5)
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navCenter = document.getElementById('nav-center');
     const searchInput = document.getElementById('main-search');
@@ -105,6 +111,25 @@ document.addEventListener('DOMContentLoaded', function() {
         sendChat.addEventListener('click', handleChat);
         chatInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') handleChat();
+        });
+    }
+
+    // Back to Top Logic
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'flex';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     }
 });
