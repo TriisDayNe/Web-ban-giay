@@ -73,7 +73,16 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 let response = "Ní ơi, câu này hơi khó với tôi. Ní thử hỏi về 'giày chạy bộ', 'khuyến mãi', 'chính sách đổi trả' hoặc 'giá rẻ' xem sao!";
                 
-                if (text.includes('5km') || text.includes('chạy bộ') || text.includes('marathon')) {
+                if (text.includes('hello') || text.includes('hi') || text.includes('xin chào') || text.includes('chào') || text.includes('hey')) {
+                    const greetings = [
+                        "Dạ SpeedRun xin chào ní! Chúc ní một ngày năng động. Ní cần tìm giày chạy bộ hay nhận ưu đãi gì không ạ?",
+                        "Hello ní! SpeedRun AI Assistant nghe đây. Ní đang quan tâm đến mẫu giày nào thế?",
+                        "Chào ní nhé! Rất vui được hỗ trợ ní. Ní muốn tôi tư vấn dòng giày Pegasus mới nhất hay xem khuyến mãi nào?",
+                        "Hi ní! Ní cần tìm giày đi tập Gym hay chạy Marathon để tôi giúp cho nè!"
+                    ];
+                    response = greetings[Math.floor(Math.random() * greetings.length)];
+                }
+                else if (text.includes('5km') || text.includes('chạy bộ') || text.includes('marathon')) {
                     response = "Dựa trên dữ liệu AIEO của SpeedRun: Để chạy bộ (5km - 42km), ní nên chọn Nike Pegasus hoặc Nike React Infinity. Những đôi này có hỗ trợ phản hồi lực cực tốt!";
                     document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
                 } 
