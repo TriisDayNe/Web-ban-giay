@@ -7,6 +7,23 @@
     <title>SpeedRun</title>
     <link rel="icon" type="image/png" href="images/SpeedRun.png">
     <link rel="stylesheet" href="style.css">
+    <!-- AEO Optimization: Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "SpeedRun",
+      "image": "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+      "description": "Cửa hàng giày thể thao SpeedRun - Chuyên cung cấp giày chạy bộ, tập luyện và phong cách đường phố.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "63 Đoàn Hồng Phước, Tân Phú",
+        "addressLocality": "TP. Hồ Chí Minh",
+        "addressCountry": "VN"
+      },
+      "telephone": "0973 823 184"
+    }
+    </script>
 </head>
 
 <body>
@@ -35,7 +52,7 @@
 
                 <div class="nav-actions">
                     <div class="search-box">
-                        <input type="text" placeholder="Tìm kiếm...">
+                        <input type="text" id="main-search" placeholder="Bạn đang tìm mẫu giày nào?">
                     </div>
 
                     <div class="icon-group">
@@ -391,6 +408,35 @@
         </div>
     </section>
 
+    <section class="aeo-faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Câu hỏi thường gặp (FAQ)</h2>
+                <p class="section-subtitle">Giải đáp nhanh các thắc mắc của bạn về SpeedRun</p>
+            </div>
+            <div class="faq-content">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">SpeedRun có bán giày chính hãng không?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Tất cả sản phẩm tại SpeedRun đều là hàng chính hãng 100%, được nhập khẩu trực tiếp từ các thương hiệu lớn như Nike, Adidas.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Chính sách đổi trả của cửa hàng như thế nào?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Bạn có thể đổi trả sản phẩm trong vòng 7 ngày kể từ khi nhận hàng nếu còn nguyên tem mác và chưa qua sử dụng.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Tôi có thể nhận hàng trong bao lâu?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Tại TP.HCM, bạn sẽ nhận được hàng trong vòng 24h. Các tỉnh thành khác thường mất từ 2-4 ngày làm việc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -484,19 +530,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const navCenter = document.getElementById('nav-center');
-
-            if (mobileMenuBtn && navCenter) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    navCenter.classList.toggle('active');
-                    mobileMenuBtn.innerHTML = navCenter.classList.contains('active') ? '✕' : '☰';
-                });
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -748,6 +748,34 @@
         color: var(--neon-green);
     }
 
+    /* AEO FAQ Styles */
+    .aeo-faq {
+        padding: calc(var(--spacing-unit) * 10) 0;
+        background-color: #fff;
+    }
+
+    .faq-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        margin-bottom: 24px;
+        padding: 20px;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .faq-item h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        color: var(--black);
+    }
+
+    .faq-item p {
+        color: var(--text-gray);
+        line-height: 1.6;
+    }
+
     .contact-info {
         list-style: none;
     }
